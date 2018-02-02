@@ -1,0 +1,13 @@
+<table width="100%" data-sly-use.model="org.millr.core.models.TableModel" cellspacing="5" cellpadding="2" border="1">
+    <sly data-sly-repeat.row="${model.rows}">
+        <tr>
+            <sly data-sly-repeat.column="${model.columns}">
+                <td class="row-${rowList.count} column-${columnList.count}">
+                    <div data-sly-test.cellLocation="${'./row-{0}-column-{1}' @ format=[rowList.count,columnList.count]}" 
+                         data-sly-resource="${ cellLocation @ resourceType='wcm/foundation/components/parsys'}" 
+                         data-sly-unwrap="${wcmmode.disabled}"></div>
+                </td>
+            </sly>
+        </tr>
+    </sly>
+</table>

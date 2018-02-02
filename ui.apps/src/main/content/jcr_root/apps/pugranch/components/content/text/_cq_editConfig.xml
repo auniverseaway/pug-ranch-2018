@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:EditConfig">
+    <cq:inplaceEditing
+        jcr:primaryType="cq:InplaceEditingConfig"
+        active="{Boolean}true"
+        configPath="inplaceConfig"
+        editorType="text"
+        removeSingleParagraphContainer="{Boolean}true"
+        singleParagraphContainerReplacement="span">
+        <inplaceConfig jcr:primaryType="nt:unstructured"
+                externalStyleSheets="[/etc.clientlibs/dexter/clientlibs/base/theme.css]">
+            <rtePlugins jcr:primaryType="nt:unstructured">
+                <edit
+                    jcr:primaryType="nt:unstructured"
+                    features="copy,paste-plaintext"/>
+                <subsuperscript
+                    jcr:primaryType="nt:unstructured"
+                    features="subscript,superscript"/>
+                <spellcheck
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <tracklinks
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <links
+                    jcr:primaryType="nt:unstructured"
+                    features="modifylink,unlink,anchor"/>
+                <justify
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <format
+                    jcr:primaryType="nt:unstructured"
+                    features="bold,italic,underline"/>
+                <lists
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+                <table
+                    jcr:primaryType="nt:unstructured"
+                    features="-">
+                    <hiddenHeaderConfig
+                        jcr:primaryType="nt:unstructured"
+                        hiddenHeaderClassName="cq-wcm-foundation-aria-visuallyhidden"/>
+                </table>
+                <paraformat
+                    jcr:primaryType="cq:WidgetCollection"
+                    features="*">
+                    <formats jcr:primaryType="nt:unstructured">
+                        <default_p
+                            jcr:primaryType="nt:unstructured"
+                            description="Paragraph"
+                            tag="p"/>
+                        <default_h1
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 1"
+                            tag="h1"/>
+                        <default_h2
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 2"
+                            tag="h2"/>
+                        <default_h3
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 3"
+                            tag="h3"/>
+                        <default_h4
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 4"
+                            tag="h4"/>
+                        <default_h5
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 5"
+                            tag="h5"/>
+                        <default_h6
+                            jcr:primaryType="nt:unstructured"
+                            description="Heading 6"
+                            tag="h6"/>
+                    </formats>
+                </paraformat>
+                <misctools jcr:primaryType="nt:unstructured"
+                    features="specialchars">
+                    <specialCharsConfig jcr:primaryType="nt:unstructured">
+                        <chars jcr:primaryType="nt:unstructured">
+                            <default_copyright
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;copy;"
+                                name="copyright"/>
+                            <default_euro
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;euro;"
+                                name="euro"/>
+                            <default_registered
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;reg;"
+                                name="registered"/>
+                            <default_trademark
+                                jcr:primaryType="nt:unstructured"
+                                entity="&amp;trade;"
+                                name="trademark"/>
+                        </chars>
+                    </specialCharsConfig>
+                </misctools>
+                <styles jcr:primaryType="nt:unstructured"
+                    features="*">
+                    <styles jcr:primaryType="cq:WidgetCollection">
+                        <dropCap
+                            jcr:primaryType="nt:unstructured"
+                            cssName="type-dropCap"
+                            text="Drop Cap"/>
+                        <serif
+                            jcr:primaryType="nt:unstructured"
+                            cssName="type-Serif"
+                            text="Serif"/>
+                    </styles>
+                </styles>
+                <iconpicker
+                    jcr:primaryType="nt:unstructured"
+                    features="iconpicker"/>
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    features="*"/>
+            </rtePlugins>
+        </inplaceConfig>
+    </cq:inplaceEditing>
+</jcr:root>

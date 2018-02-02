@@ -1,0 +1,11 @@
+<tab-control data-sly-use.model="org.millr.core.models.TabControl"
+    data-sort-by="${model.sortBy}"
+    data-model="${'{0}.model.json' @ format = resource.path}"
+    data-title="${model.title || 'testing 123'}">
+    <h2>${properties.subTitle || 'Sub Title'}</h2>
+    <sly data-sly-repeat.child="${model.children}">
+        <tab-item>${child.title}</tab-item>
+    </sly>
+</tab-control>
+
+
